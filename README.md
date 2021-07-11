@@ -2,39 +2,33 @@
 
 ## Installation
 
-## Preflight Check
-
-[] NodeJS
-[] Go lang
-
-### Client
+1. Install NodeJS
+2. Install Golang
+3. Install dependencies
 
 ```
 $ cd client
 $ npm i
-```
 
-### Server
-
-```
 $ cd server
 $ go get
 ```
 
 ## Running
 
-### Client
-
+**Client**
 ```
 $ cd client
 $ npm start
 ```
+Access your app with localhost:3000
 
-### Server
+**Server**
 ```
 $ cd server
 $ ./run.sh
 ```
+Access GraphQL Playground on localhost:8080
 
 ## Development
 
@@ -66,3 +60,8 @@ mutation {
       }
   }
 ```
+
+## Known problems
+
+**Problem:** GraphQL Playground: __mode Graphql unable to change stream__
+**Solution:** Clear Localstorage
