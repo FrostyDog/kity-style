@@ -39,10 +39,6 @@ Access GraphQL Playground on localhost:8080
     id
     text
     done
-    user {
-      id
-      name
-    }
   }
 }
 ```
@@ -50,14 +46,10 @@ Access GraphQL Playground on localhost:8080
 **Create New Todo**
 ```
 mutation {
-  createTodo(input:{text:"Feed Kitty", userId:"1"}) {
+  createTodo(input:{text:"Feed Kitty"}) {
     id
-      text
-      done
-      user {
-        id
-        name
-      }
+    text
+    done
   }
 ```
 

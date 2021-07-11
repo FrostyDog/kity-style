@@ -5,30 +5,28 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"graphql/graph/generated"
 	"graphql/graph/model"
 	"strconv"
 )
 
 func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
-	var targetUser *model.User
-	for _, user := range r.users {
-		if user.ID == input.UserID {
-			targetUser = user
-			break
-		}
-	}
+	// var targetUser *model.User
+	// for _, user := range r.users {
+	// 	if user.ID == input.UserID {
+	// 		targetUser = user
+	// 		break
+	// 	}
+	// }
 
-	if targetUser == nil {
-		return nil, fmt.Errorf("user ID='%s' not found", input.UserID)
-	}
+	// if targetUser == nil {
+	// 	return nil, fmt.Errorf("user ID='%s' not found", input.UserID)
+	// }
 
 	newTodo := &model.Todo{
 		ID:   strconv.Itoa(r.lastTodoId),
 		Text: input.Text,
 		Done: false,
-		User: targetUser,
 	}
 
 	r.todos = append(r.todos, newTodo)
