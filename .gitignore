@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/UserPortal/node_modules
+/user-portal/node_modules
 /.pnp
 .pnp.js
 
