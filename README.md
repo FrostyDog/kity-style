@@ -12,5 +12,5 @@ $ npm start
 ### Server
 ```
 $ cd server
-$ go run main.go
+$ ./run.sh
 ```
