@@ -21,7 +21,7 @@ func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) 
 	}
 
 	if targetUser == nil {
-		return nil, fmt.Errorf("User ID='%s' not found", input.UserID)
+		return nil, fmt.Errorf("user ID='%s' not found", input.UserID)
 	}
 
 	newTodo := &model.Todo{
